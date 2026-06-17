@@ -1,20 +1,79 @@
-body{
-    background: radial-gradient(circle at center, #001f3f, #000000);
-
-    color: white;
-    font-family: Arial;
-    perspective: 1000px;
-    line-height: 1.6;
-    text-align: center;
+/* Base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    transition: 0.3s;
+    background: #f5f7fb;
+    color: #222;
 }
 
-.hero h1{
-    font-size: 70px;
+/* Dark mode */
+body.dark {
+    background: #0f172a;
+    color: white;
+}
 
-    color: cyan;
+/* Header */
+.hero {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(135deg, #2563eb, #1e3a8a);
+    color: white;
+}
 
-    text-shadow:
-    0 0 10px cyan,
-    0 0 20px cyan,
-    0 0 40px cyan;
+/* Nav */
+nav {
+    display: flex;
+    justify-content: center;
+    background: #111827;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Cards */
+.card {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+body.dark .card {
+    background: #1e293b;
+}
+
+/* Skills */
+.grid span {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 20px;
+}
+
+/* Projects */
+.project {
+    margin-top: 15px;
+    padding: 10px;
+    border-left: 4px solid #2563eb;
+}
+
+/* Button */
+button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
 }

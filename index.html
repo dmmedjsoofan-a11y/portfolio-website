@@ -3,486 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prashant Patil | ECE Portfolio</title>
-
-    <!-- CSS -->
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
-
-        body{
-            background: linear-gradient(135deg, #000000, #111122, #001f3f);
-            color:white;
-            font-family:Arial;
-            perspective:1000px;
-            line-height:1.6;
-        }
-
-        nav{
-            display:flex;
-            justify-content:space-between;
-            padding:20px;
-            background:#111;
-        }
-
-        nav ul{
-            display:flex;
-            list-style:none;
-        }
-
-        nav li{
-            margin-left:20px;
-        }
-
-        nav a{
-            color:white;
-            text-decoration:none;
-        }
-
-        nav a:hover{
-            color:cyan;
-        }
-
-        .hero{
-            text-align:center;
-            padding:100px 20px;
-            animation: float 3s infinite;
-        }
-
-        .hero h1{
-            font-size:45px;
-            text-shadow: 0 0 10px cyan;
-        }
-
-        @keyframes float{
-            0%{
-                transform: translateY(0px);
-            }
-            50%{
-                transform: translateY(-8px);
-            }
-            100%{
-                transform: translateY(0px);
-            }
-        }
-
-        section{
-            padding:50px;
-            text-align:center;
-        }
-
-        .skills-box span{
-            display:inline-block;
-            background:#333;
-            padding:10px 15px;
-            margin:5px;
-            border-radius:5px;
-        }
-
-        .project-card{
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-            border:1px solid rgba(255,255,255,0.2);
-            width:60%;
-            margin:20px auto;
-            padding:20px;
-            border-radius:15px;
-
-            transform-style: preserve-3d;
-            transition:0.4s;
-        }
-
-        .project-card:hover{
-            transform: scale(1.05) rotateY(10deg);
-        }
-
-        footer{
-            background:#111;
-            text-align:center;
-            padding:20px;
-            margin-top:20px;
-        }
-
-        button{
-            padding:12px 25px;
-            border:none;
-            border-radius:10px;
-            cursor:pointer;
-
-            background:cyan;
-            color:black;
-
-            box-shadow:0 8px 0 #008b8b;
-            transition:0.2s;
-        }
-
-        button:active{
-            transform: translateY(8px);
-            box-shadow:none;
-        }
-    </style>
+    <title>Your Name | ECE Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <h2>Prashant Patil</h2>
+<header class="hero">
+    <h1>Your Name</h1>
+    <p>ECE Student | Embedded Systems | IoT | Web Developer</p>
 
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <button id="toggleTheme">🌙 Toggle Theme</button>
+</header>
 
-    <!-- Hero -->
-    <section class="hero">
-        <h1>Hello, I'm Prashant Patil</h1>
-        <p>ECE Student | Python Learner | Future Engineer</p>
+<nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-        <button id="btn">View Projects</button>
+<section id="about" class="card">
+    <h2>About Me</h2>
+    <p>
+        I am an Electronics and Communication Engineering student passionate about 
+        IoT, Embedded Systems, AI, and Web Development. I enjoy building real-world
+        projects that combine hardware and software.
+    </p>
+</section>
 
-        <p id="message"></p>
-    </section>
+<section id="skills" class="card">
+    <h2>Skills</h2>
+    <div class="grid">
+        <span>Python</span>
+        <span>C Programming</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>MATLAB</span>
+        <span>Arduino</span>
+        <span>IoT Basics</span>
+    </div>
+</section>
 
-    <!-- About -->
-    <section id="about">
-        <h2>About Me</h2>
+<section id="projects" class="card">
+    <h2>Projects</h2>
 
-        <p>
-            I am an Electronics and Communication Engineering student
-            interested in Python, AI, Embedded Systems and Web Development.
-        </p>
-    </section>
+    <div class="project">
+        <h3>Smart Irrigation System</h3>
+        <p>Automated irrigation using soil moisture sensor and Arduino.</p>
+    </div>
 
-    <!-- Skills -->
-    <section id="skills">
-        <h2>Skills</h2>
+    <div class="project">
+        <h3>Inventory Management System</h3>
+        <p>Python-based system to manage stock and products efficiently.</p>
+    </div>
+</section>
 
-        <div class="skills-box">
-            <span>Python</span>
-            <span>C</span>
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>MATLAB</span>
-        </div>
-    </section>
+<section id="certifications" class="card">
+    <h2>Certifications</h2>
+    <ul>
+        <li>MATLAB for Engineers</li>
+        <li>Python Programming</li>
+        <li>IoT Fundamentals</li>
+    </ul>
+</section>
 
-    <!-- Projects -->
-    <section id="projects">
-        <h2>Projects</h2>
+<section id="contact" class="card">
+    <h2>Contact</h2>
+    <p>Email: yourmail@gmail.com</p>
+    <p>LinkedIn: https://linkedin.com/in/yourprofile</p>
+    <p>GitHub: https://github.com/yourprofile</p>
+</section>
 
-        <div class="project-card">
-            <h3>Inventory Management System</h3>
-            <p>Python-based stock management project.</p>
-        </div>
+<footer>
+    <p>© 2026 Your Name | Built with HTML, CSS & JS</p>
+</footer>
 
-        <div class="project-card">
-            <h3>Student Marks Analyzer</h3>
-            <p>Program for marks calculation and performance analysis.</p>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-
-        <p>Email: yourmail@gmail.com</p>
-        <p>GitHub: github.com/yourusername</p>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 Prashant Patil</p>
-    </footer>
-
-    <!-- JavaScript -->
-    <script>
-
-        alert("Portfolio Loaded Successfully!");
-
-        console.log("Portfolio Loaded Successfully!");
-
-        document.getElementById("message").innerText =
-        "Welcome to my portfolio website!";
-
-        document.getElementById("btn").addEventListener("click", function() {
-            alert("Scrolling to Projects Section");
-        });
-
-        const cards = document.querySelectorAll(".project-card");
-
-        cards.forEach(card => {
-            card.addEventListener("mousemove", (e) => {
-
-                let x = e.offsetX;
-                let y = e.offsetY;
-
-                let rotateX = -(y / 10);
-                let rotateY = x / 10;
-
-                card.style.transform =
-                `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-
-            });
-
-            card.addEventListener("mouseleave", () => {
-                card.style.transform = "rotateX(0deg) rotateY(0deg)";
-            });
-        });
-
-    </script>
-
+<script src="script.js"></script>
 </body>
 </html>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prashant Patil | ECE Portfolio</title>
-
-    <!-- CSS -->
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
-
-        body{
-            background: linear-gradient(135deg, #000000, #111122, #001f3f);
-            color:white;
-            font-family:Arial;
-            perspective:1000px;
-            line-height:1.6;
-        }
-
-        nav{
-            display:flex;
-            justify-content:space-between;
-            padding:20px;
-            background:#111;
-        }
-
-        nav ul{
-            display:flex;
-            list-style:none;
-        }
-
-        nav li{
-            margin-left:20px;
-        }
-
-        nav a{
-            color:white;
-            text-decoration:none;
-        }
-
-        nav a:hover{
-            color:cyan;
-        }
-
-        .hero{
-            text-align:center;
-            padding:100px 20px;
-            animation: float 3s infinite;
-        }
-
-        .hero h1{
-            font-size:45px;
-            text-shadow: 0 0 10px cyan;
-        }
-
-        @keyframes float{
-            0%{
-                transform: translateY(0px);
-            }
-            50%{
-                transform: translateY(-8px);
-            }
-            100%{
-                transform: translateY(0px);
-            }
-        }
-
-        section{
-            padding:50px;
-            text-align:center;
-        }
-
-        .skills-box span{
-            display:inline-block;
-            background:#333;
-            padding:10px 15px;
-            margin:5px;
-            border-radius:5px;
-        }
-
-        .project-card{
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-            border:1px solid rgba(255,255,255,0.2);
-            width:60%;
-            margin:20px auto;
-            padding:20px;
-            border-radius:15px;
-
-            transform-style: preserve-3d;
-            transition:0.4s;
-        }
-
-        .project-card:hover{
-            transform: scale(1.05) rotateY(10deg);
-        }
-
-        footer{
-            background:#111;
-            text-align:center;
-            padding:20px;
-            margin-top:20px;
-        }
-
-        button{
-            padding:12px 25px;
-            border:none;
-            border-radius:10px;
-            cursor:pointer;
-
-            background:cyan;
-            color:black;
-
-            box-shadow:0 8px 0 #008b8b;
-            transition:0.2s;
-        }
-
-        button:active{
-            transform: translateY(8px);
-            box-shadow:none;
-        }
-    </style>
-</head>
-
-<body>
-
-    <!-- Navigation -->
-    <nav>
-        <h2>Prashant Patil</h2>
-
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Hero -->
-    <section class="hero">
-        <h1>Hello, I'm Prashant Patil</h1>
-        <p>ECE Student | Python Learner | Future Engineer</p>
-
-        <button id="btn">View Projects</button>
-
-        <p id="message"></p>
-    </section>
-
-    <!-- About -->
-    <section id="about">
-        <h2>About Me</h2>
-
-        <p>
-            I am an Electronics and Communication Engineering student
-            interested in Python, AI, Embedded Systems and Web Development.
-        </p>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills">
-        <h2>Skills</h2>
-
-        <div class="skills-box">
-            <span>Python</span>
-            <span>C</span>
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>MATLAB</span>
-        </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects">
-        <h2>Projects</h2>
-
-        <div class="project-card">
-            <h3>Inventory Management System</h3>
-            <p>Python-based stock management project.</p>
-        </div>
-
-        <div class="project-card">
-            <h3>Student Marks Analyzer</h3>
-            <p>Program for marks calculation and performance analysis.</p>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-
-        <p>Email: yourmail@gmail.com</p>
-        <p>GitHub: github.com/yourusername</p>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 Prashant Patil</p>
-    </footer>
-
-    <!-- JavaScript -->
-    <script>
-
-        alert("Portfolio Loaded Successfully!");
-
-        console.log("Portfolio Loaded Successfully!");
-
-        document.getElementById("message").innerText =
-        "Welcome to my portfolio website!";
-
-        document.getElementById("btn").addEventListener("click", function() {
-            alert("Scrolling to Projects Section");
-        });
-
-        const cards = document.querySelectorAll(".project-card");
-
-        cards.forEach(card => {
-            card.addEventListener("mousemove", (e) => {
-
-                let x = e.offsetX;
-                let y = e.offsetY;
-
-                let rotateX = -(y / 10);
-                let rotateY = x / 10;
-
-                card.style.transform =
-                `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-
-            });
-
-            card.addEventListener("mouseleave", () => {
-                card.style.transform = "rotateX(0deg) rotateY(0deg)";
-            });
-        });
-
-    </script>
-
-</body>
-</html>
->>>>>>> 5f435671e5002ca72ad94c6c11cce024999e1fdf

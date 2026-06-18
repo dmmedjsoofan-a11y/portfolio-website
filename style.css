@@ -1,51 +1,64 @@
 /* Base */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     margin: 0;
     transition: 0.3s;
     background: #f5f7fb;
-    color: #222;
+    color: #111;
 }
 
 /* Dark mode */
 body.dark {
     background: #0f172a;
+    color: #f1f5f9;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
     color: white;
 }
 
-/* Header */
-.hero {
-    text-align: center;
-    padding: 50px;
-    background: linear-gradient(135deg, #2563eb, #1e3a8a);
-    color: white;
+.buttons {
+    margin-top: 15px;
+}
+
+.btn, button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
 }
 
 /* Nav */
 nav {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     background: #111827;
     padding: 10px;
-    flex-wrap: wrap;
 }
 
 nav a {
     color: white;
     margin: 10px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 /* Cards */
 .card {
-    max-width: 900px;
+    max-width: 950px;
     margin: 30px auto;
-    padding: 20px;
+    padding: 25px;
     background: white;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 body.dark .card {
@@ -57,23 +70,38 @@ body.dark .card {
     display: inline-block;
     background: #2563eb;
     color: white;
-    padding: 8px 12px;
+    padding: 8px 14px;
     margin: 5px;
     border-radius: 20px;
 }
 
 /* Projects */
-.project {
-    margin-top: 15px;
-    padding: 10px;
-    border-left: 4px solid #2563eb;
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
 }
 
-/* Button */
-button {
-    margin-top: 15px;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-    border-radius: 8px;
+.project-card {
+    background: #f1f5f9;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+body.dark .project-card {
+    background: #0f172a;
+    border: 1px solid #334155;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111827;
+    color: white;
 }

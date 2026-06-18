@@ -2,14 +2,14 @@
 const btn = document.getElementById("toggleTheme");
 
 btn.addEventListener("click", () => {
-	document.body.classList.toggle("dark");
+    document.body.classList.toggle("dark");
 });
 
-// Smooth scroll effect
+// Smooth scrolling
 document.querySelectorAll("nav a").forEach(link => {
-	link.addEventListener("click", function(e) {
-		e.preventDefault();
-		document.querySelector(this.getAttribute("href"))
-		.scrollIntoView({ behavior: "smooth" });
-	});
+    link.addEventListener("click", function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href"))
+        .scrollIntoView({ behavior: "smooth" });
+    });
 });

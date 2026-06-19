@@ -303,10 +303,12 @@ button{
 }
 
 .hero-image img{
-    width:180x;
+    width:120x;
+    height:120px;
+    object-fit:cover;
     border-radius:50%;
-    border:3px solid #00e5ff;
-    box-shadow:0 0 40px #00e5ff;
+    border:2px solid #00e5ff;
+    box-shadow:0 0 15px #00e5ff;
 }
 
 @media(max-width:900px){
@@ -316,9 +318,8 @@ button{
 }
 
 .hero-image img{
-    object -fit:cover;
-    aspect-ratio:1/1;
-    width:120px;
+    width:90px;
+    height:90px;
 }
 
 }

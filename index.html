@@ -3,98 +3,267 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prashanta Patil | Portfolio</title>
+    <title>PRASHANT S | Engineer Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- AOS Animation -->
-    <link rel="stylesheet"
-    href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
+
 <body>
 
-<div id="particles-js"></div>
+    <!-- 3D Background Canvas -->
+    <canvas id="bg"></canvas>
 
-<header class="hero">
-    <h1 id="name">Prashanta Patil</h1>
+    <!-- Navbar -->
+    <nav class="navbar">
 
-    <h2>
-        <span id="typing"></span>
-    </h2>
+        <div class="logo">PS</div>
 
-    <p>
-        Electronics & Communication Engineer passionate about
-        Embedded Systems, IoT, Python and Web Development.
-    </p>
+        <ul>
 
-    <div class="hero-buttons">
-        <a href="#projects" class="btn">View Projects</a>
-        <a href="#contact" class="btn">Contact Me</a>
-    </div>
-</header>
+            <li><a href="#about">About</a></li>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-</nav>
+            <li><a href="#skills">Skills</a></li>
 
-<section id="about" data-aos="fade-up">
-    <h2>About Me</h2>
-    <p>
-        I am an ECE student who enjoys building engineering solutions
-        using hardware and software. Interested in IoT, Embedded Systems,
-        AI and modern development technologies.
-    </p>
-</section>
+            <li><a href="#projects">Projects</a></li>
 
-<section id="skills" data-aos="fade-right">
-    <h2>Skills</h2>
-    <div class="skills-container">
-        <div class="skill-card">Python</div>
-        <div class="skill-card">C</div>
-        <div class="skill-card">HTML</div>
-        <div class="skill-card">CSS</div>
-        <div class="skill-card">JavaScript</div>
-        <div class="skill-card">Arduino</div>
-        <div class="skill-card">MATLAB</div>
-        <div class="skill-card">IoT</div>
-    </div>
-</section>
+            <li><a href="#education">Education</a></li>
 
-<section id="projects" data-aos="zoom-in">
-    <h2>Projects</h2>
-    <div class="projects-container">
-        <div class="project-card">
-            <h3>Smart Irrigation System</h3>
-            <p>IoT based automated irrigation project using sensors.</p>
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1 id="main-name">PRASHANT S</h1>
+
+            <h2 id="typing-text"></h2>
+
+            <p>
+
+                Second Year Electronics & Communication Engineering Student
+
+                building future technologies through Embedded Systems,
+
+                Artificial Intelligence and Software Development.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#projects" class="btn">View Projects</a>
+
+                <a href="#contact" class="btn">Contact Me</a>
+
+            </div>
+
         </div>
-        <div class="project-card">
-            <h3>Inventory Management</h3>
-            <p>Python based product and stock management application.</p>
+
+    </section>
+
+
+    <!-- About -->
+
+    <section id="about" class="glass-card">
+
+        <h2>About Me</h2>
+
+        <p>
+
+            I am currently pursuing Electronics and Communication Engineering
+
+            at KLS Gogte Institute of Technology, Belgaum.
+
+            I am deeply interested in Embedded Systems, Artificial Intelligence,
+
+            IoT development and software engineering. I enjoy learning new
+
+            technologies and applying them to real engineering solutions.
+
+        </p>
+
+    </section>
+
+
+    <!-- Skills -->
+
+    <section id="skills">
+
+        <h2 class="section-title">Technical Skills</h2>
+
+        <div class="skills-grid">
+
+            <div class="skill">Python</div>
+
+            <div class="skill">C Programming</div>
+
+            <div class="skill">HTML</div>
+
+            <div class="skill">CSS</div>
+
+            <div class="skill">JavaScript</div>
+
+            <div class="skill">MATLAB</div>
+
+            <div class="skill">AI / ML</div>
+
+            <div class="skill">GitHub</div>
+
         </div>
-        <div class="project-card">
-            <h3>Line Following Robot</h3>
-            <p>Embedded robotics project using IR sensor logic.</p>
+
+    </section>
+
+
+    <!-- Projects -->
+
+    <section id="projects">
+
+        <h2 class="section-title">Projects</h2>
+
+        <div class="project-container">
+
+            <div class="project-card">
+
+                <h3>MATLAB Engineering Simulations</h3>
+
+                <p>
+
+                    Developed engineering simulation models for solving
+
+                    computational and analytical problems using MATLAB.
+
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>Portfolio Website Development</h3>
+
+                <p>
+
+                    Designed and deployed a professional web portfolio using
+
+                    HTML, CSS, JavaScript and Git workflow.
+
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>Engineering Lab Practical Work</h3>
+
+                <p>
+
+                    Performed electronics laboratory experimentation and
+
+                    practical circuit implementation.
+
+                </p>
+
+            </div>
+
         </div>
-    </div>
-</section>
 
-<section id="contact" data-aos="fade-left">
-    <h2>Contact</h2>
-    <p>Email : yourmail@gmail.com</p>
-    <p>GitHub : github.com/yourprofile</p>
-    <p>LinkedIn : linkedin.com/in/yourprofile</p>
-</section>
+    </section>
 
-<footer>
-    <p>© 2026 Prashanta Patil</p>
-</footer>
 
-<!-- JS Libraries -->
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script src="script.js"></script>
+    <!-- Education -->
+
+    <section id="education" class="glass-card">
+
+        <h2>Education</h2>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+
+                <h3>2025 - Present</h3>
+
+                <p>
+
+                    B.E Electronics & Communication Engineering
+
+                    <br>
+
+                    KLS Gogte Institute Of Technology
+
+                    <br>
+
+                    Belgaum
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Certifications -->
+
+    <section id="certifications">
+
+        <h2 class="section-title">Certifications</h2>
+
+        <div class="skills-grid">
+
+            <div class="skill">AI / ML Certification</div>
+
+            <div class="skill">MATLAB Certification</div>
+
+            <div class="skill">More Coming Soon</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+
+    <section id="contact" class="glass-card">
+
+        <h2>Contact</h2>
+
+        <p>Email: dmmedjsoofan@gmail.com</p>
+
+        <p>GitHub: dmmedjsoofan</p>
+
+        <p>LinkedIn: Coming Soon</p>
+
+        <div class="hero-buttons">
+
+            <a href="#" class="btn">Download Resume</a>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>© 2026 PRASHANT S | Engineer Portfolio</p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
 </body>
 </html>

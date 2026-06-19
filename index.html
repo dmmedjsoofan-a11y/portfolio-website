@@ -3,118 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | ECE Engineer</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <title>Prashanta Patil | Portfolio</title>
 
+    <link rel="stylesheet" href="style.css">
+
+    <!-- AOS Animation -->
+    <link rel="stylesheet"
+    href="https://unpkg.com/aos@next/dist/aos.css"/>
+</head>
 <body>
 
+<div id="particles-js"></div>
+
 <header class="hero">
-    <h1>Your Name</h1>
+    <h1 id="name">Prashanta Patil</h1>
 
-    <h2 class="typing">ECE Student | Embedded Systems | IoT | Web Developer</h2>
+    <h2>
+        <span id="typing"></span>
+    </h2>
 
-    <p class="subtitle">
-        Building real-world engineering solutions using hardware + software integration
+    <p>
+        Electronics & Communication Engineer passionate about
+        Embedded Systems, IoT, Python and Web Development.
     </p>
 
-    <div class="buttons">
-        <button id="toggleTheme">🌙 Theme</button>
-        <a href="resume.pdf" class="btn">📄 Resume</a>
-        <a href="#contact" class="btn primary">🚀 Hire Me</a>
+    <div class="hero-buttons">
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="#contact" class="btn">Contact Me</a>
     </div>
 </header>
 
 <nav>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
-    <a href="#stats">Stats</a>
     <a href="#projects">Projects</a>
-    <a href="#certifications">Certifications</a>
     <a href="#contact">Contact</a>
 </nav>
 
-<section id="about" class="card reveal">
+<section id="about" data-aos="fade-up">
     <h2>About Me</h2>
     <p>
-        I am an Electronics and Communication Engineering student passionate about embedded systems,
-        IoT solutions, digital circuits, and full-stack development. I enjoy designing systems that
-        bridge hardware and software to solve real-world problems.
+        I am an ECE student who enjoys building engineering solutions
+        using hardware and software. Interested in IoT, Embedded Systems,
+        AI and modern development technologies.
     </p>
 </section>
 
-<section id="skills" class="card reveal">
-    <h2>Technical Skills</h2>
-    <div class="grid">
-        <span>Python</span>
-        <span>C Programming</span>
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>MATLAB</span>
-        <span>Arduino</span>
-        <span>Embedded Systems</span>
-        <span>IoT</span>
+<section id="skills" data-aos="fade-right">
+    <h2>Skills</h2>
+    <div class="skills-container">
+        <div class="skill-card">Python</div>
+        <div class="skill-card">C</div>
+        <div class="skill-card">HTML</div>
+        <div class="skill-card">CSS</div>
+        <div class="skill-card">JavaScript</div>
+        <div class="skill-card">Arduino</div>
+        <div class="skill-card">MATLAB</div>
+        <div class="skill-card">IoT</div>
     </div>
 </section>
 
-<section id="stats" class="card reveal stats">
-    <h2>Profile Overview</h2>
-
-    <div class="stats-grid">
-        <div><h3>3+</h3><p>Projects</p></div>
-        <div><h3>8+</h3><p>Skills</p></div>
-        <div><h3>5+</h3><p>Certifications</p></div>
-        <div><h3>1</h3><p>Internship Ready</p></div>
-    </div>
-</section>
-
-<section id="projects" class="card reveal">
+<section id="projects" data-aos="zoom-in">
     <h2>Projects</h2>
-
-    <div class="project-grid">
-
+    <div class="projects-container">
         <div class="project-card">
             <h3>Smart Irrigation System</h3>
-            <p>IoT-based automation using soil moisture sensors and Arduino for efficient water usage.</p>
+            <p>IoT based automated irrigation project using sensors.</p>
         </div>
-
         <div class="project-card">
-            <h3>Inventory Management System</h3>
-            <p>Python application to manage stock, products, and sales tracking system efficiently.</p>
+            <h3>Inventory Management</h3>
+            <p>Python based product and stock management application.</p>
         </div>
-
         <div class="project-card">
             <h3>Line Following Robot</h3>
-            <p>Embedded system robot using IR sensors and microcontroller logic for automation tasks.</p>
+            <p>Embedded robotics project using IR sensor logic.</p>
         </div>
-
     </div>
 </section>
 
-<section id="certifications" class="card reveal">
-    <h2>Certifications</h2>
-    <ul>
-        <li>MATLAB for Engineers</li>
-        <li>Python Programming</li>
-        <li>IoT Fundamentals</li>
-        <li>Digital Circuits (NPTEL)</li>
-    </ul>
-</section>
-
-<section id="contact" class="card reveal">
+<section id="contact" data-aos="fade-left">
     <h2>Contact</h2>
-    <p>Email: yourmail@gmail.com</p>
-    <p>LinkedIn: linkedin.com/in/yourprofile</p>
-    <p>GitHub: github.com/yourprofile</p>
-
-    <a class="btn primary" href="mailto:yourmail@gmail.com">Send Email</a>
+    <p>Email : yourmail@gmail.com</p>
+    <p>GitHub : github.com/yourprofile</p>
+    <p>LinkedIn : linkedin.com/in/yourprofile</p>
 </section>
 
 <footer>
-    <p>© 2026 Your Name | ECE Engineer Portfolio</p>
+    <p>© 2026 Prashanta Patil</p>
 </footer>
 
+<!-- JS Libraries -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

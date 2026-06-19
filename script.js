@@ -1,29 +1,106 @@
-// Theme toggle
-const btn = document.getElementById("toggleTheme");
+/* typing effect */
 
-btn.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-});
+const words = [
+    "ECE Student",
+    "Python Developer",
+    "IoT Enthusiast",
+    "Embedded Systems Learner",
+    "Future Engineer"
+];
 
-// Smooth scroll
-document.querySelectorAll("nav a").forEach(link => {
-    link.addEventListener("click", function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute("href"))
-        .scrollIntoView({ behavior: "smooth" });
-    });
-});
+let i = 0;
+let j = 0;
+let currentWord = "";
+let isDeleting = false;
 
-// Scroll reveal animation
-const reveals = document.querySelectorAll(".reveal");
+function type(){
 
-window.addEventListener("scroll", () => {
-    for (let i = 0; i < reveals.length; i++) {
-        let windowHeight = window.innerHeight;
-        let elementTop = reveals[i].getBoundingClientRect().top;
+    currentWord = words[i];
 
-        if (elementTop < windowHeight - 100) {
-            reveals[i].classList.add("active");
+    if(isDeleting){
+
+        document.getElementById("typing").textContent =
+        currentWord.substring(0,j--);
+
+    }
+
+    else{
+
+        document.getElementById("typing").textContent =
+        currentWord.substring(0,j++);
+
+    }
+
+    if(!isDeleting && j === currentWord.length){
+
+        isDeleting = true;
+
+        setTimeout(type,1000);
+
+        return;
+    }
+
+    if(isDeleting && j === 0){
+
+        isDeleting = false;
+
+        i++;
+
+        if(i===words.length){
+
+            i=0;
         }
     }
+
+    setTimeout(type,isDeleting?60:120);
+}
+
+type();
+
+
+/* particles */
+
+particlesJS("particles-js",{
+
+  particles:{
+
+    number:{ value:80 },
+
+    color:{ value:"#00ffff" },
+
+    line_linked:{
+        enable:true
+    },
+
+    move:{
+        speed:3
+    }
+
+  }
+
+});
+
+
+/* AOS */
+
+AOS.init({
+    duration:1000
+});
+
+
+/* smooth scroll */
+
+document.querySelectorAll("nav a").forEach(link=>{
+
+    link.addEventListener("click",function(e){
+
+        e.preventDefault();
+
+        document.querySelector(
+            this.getAttribute("href")
+        ).scrollIntoView({
+            behavior:"smooth"
+        });
+
+    });
 });

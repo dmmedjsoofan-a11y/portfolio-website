@@ -203,3 +203,25 @@ document.querySelectorAll(".skill, .project-card"),
     "max-glare":0.3
 }
 );
+/* particles */
+
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 60 },
+    color: { value: "#00e5ff" },
+    shape: { type: "circle" },
+    opacity: { value: 0.3 },
+    size: { value: 3 },
+    move: { enable: true, speed: 1.5 }
+  }
+});
+/* custom cursor */
+
+const cursor = document.querySelector(".cursor");
+
+document.addEventListener("mousemove",(e)=>{
+
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+
+});

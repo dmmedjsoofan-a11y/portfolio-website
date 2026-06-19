@@ -6,7 +6,7 @@
 }
 
 body{
-    font-family:Arial, sans-serif;
+    font-family:'Poppins', sans-serif;
     background:#050816;
     color:white;
     overflow-x:hidden;
@@ -75,7 +75,7 @@ body{
 }
 
 #main-name{
-    font-size:80px;
+    font-size:65px;
     letter-spacing:3px;
     color:#00e5ff;
     animation:glow 2s infinite alternate;
@@ -274,5 +274,49 @@ button{
     background:none;
 
     cursor:pointer;
+
+}
+#particles-js{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:-2;
+}
+.cursor{
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:#00e5ff;
+    position:fixed;
+    pointer-events:none;
+    z-index:9999;
+    box-shadow:0 0 20px #00e5ff;
+    transform:translate(-50%,-50%);
+}
+.hero-layout{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:80px;
+}
+
+.hero-image img{
+    width:320px;
+    border-radius:50%;
+    border:3px solid #00e5ff;
+    box-shadow:0 0 40px #00e5ff;
+}
+
+@media(max-width:900px){
+
+.hero-layout{
+    flex-direction:column;
+}
+
+.hero-image img{
+    width:220px;
+}
 
 }

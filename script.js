@@ -171,3 +171,35 @@ gsap.from(".navbar", {
     opacity: 0,
     duration: 1.5
 });
+/* Scroll reveal animation */
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("show");
+
+        }
+
+    });
+
+});
+
+document.querySelectorAll("section").forEach((sec)=>{
+
+    observer.observe(sec);
+
+});
+/* Card tilt */
+
+VanillaTilt.init(
+document.querySelectorAll(".skill, .project-card"),
+{
+    max:15,
+    speed:400,
+    glare:true,
+    "max-glare":0.3
+}
+);
